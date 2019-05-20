@@ -7,5 +7,4 @@ class WhiskeysController < ApplicationController
     def new
         @whiskey = Whiskey.new
     end
-
 end
