@@ -22,4 +22,10 @@ class WhiskeysController < ApplicationController
             render :new
         end
     end
+
+    private
+
+    def whiskey_params
+        params.require(:whiskey).permit(:name, :distillery, :origin, :age, :type, :proof, :price)
+    end
 end
