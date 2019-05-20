@@ -4,6 +4,8 @@ class WhiskeysController < ApplicationController
         @whiskeys = Whiskey.all        
     end 
 
-    
+    def new
+        @whiskey = Whiskey.new
+    end
 
 end
