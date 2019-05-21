@@ -22,6 +22,10 @@ class WhiskeysController < ApplicationController
         end
     end
 
+    def edit
+        @whiskey = Whiskey.find_by(id: params[:id])
+    end
+
     def update
         @whiskey = Whiskey.find_by(id: params[:id])
             @whiskey.update(whiskey_params)
