@@ -5,5 +5,14 @@
 <% end %>
 
 <%= form_for [@mark] do |f| %>
-    <%= whiskey_id_field(@mark) %>
-    <%= f.hidden_field :user_id %>
+        <%= whiskey_id_field(@mark) %>
+        <%= f.hidden_field :user_id %>
+
+    <%= f.label "Score: " %>
+        <%= f.text_field :score %>
+    <%= f.label "Comments: " %>
+        <%= f.text_area :comments %>
+
+    <%= f.submit "Submit" %>
+
+<% end %>   
