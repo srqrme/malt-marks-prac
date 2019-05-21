@@ -15,7 +15,6 @@ class WhiskeysController < ApplicationController
     def create
         @whiskey = Whiskey.find_or_create_by(whiskey_params)
         if @whiskey.valid?
-            @whiskey.name = @whiskey.full_name
             @whiskey.save
             redirect_to @whiskey
         else
