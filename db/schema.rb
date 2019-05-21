@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_150212) do
+ActiveRecord::Schema.define(version: 2019_05_21_171223) do
 
   create_table "marks", force: :cascade do |t|
     t.integer "user_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_20_150212) do
     t.string "distillery"
     t.string "origin"
     t.integer "age"
-    t.string "type"
+    t.string "category"
     t.integer "proof"
     t.integer "price"
     t.datetime "created_at", null: false
