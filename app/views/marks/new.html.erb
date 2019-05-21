@@ -1,0 +1,9 @@
+<h1>Add Your Marks:</h1>
+
+<% if @mark.whiskey %>
+    <%= @mark.whiskey.name %>
+<% end %>
+
+<%= form_for [@mark] do |f| %>
+    <%= whiskey_id_field(@mark) %>
+    <%= f.hidden_field :user_id %>
