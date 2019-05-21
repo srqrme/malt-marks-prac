@@ -8,6 +8,14 @@ class MarksController < ApplicationController
         end
     end
 
+    def new
+        if params[:whiskey_id] && !Whiskey.exists?(params[:whiskey_id])
+            redirect_to whiskeys_path
+        else
+            @mark = Mark.new(:whiskey_id => params[:whiskey_id], :user_id => current_user.id)
+        end 
+    end
+
     private
 
     def mark_params
