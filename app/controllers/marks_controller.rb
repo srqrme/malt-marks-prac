@@ -8,5 +8,10 @@ class MarksController < ApplicationController
         end
     end
 
+    private
+
+    def mark_params
+        params.require(:mark).permit(:score, :comments, :user_id, :whiskey_id)
+    end
 
 end
