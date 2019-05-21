@@ -22,6 +22,12 @@ class WhiskeysController < ApplicationController
         end
     end
 
+    def update
+        @whiskey = Whiskey.find_by(id: params[:id])
+            @whiskey.update(whiskey_params)
+            redirect_to @whiskey
+    end
+
     private
 
     def whiskey_params
